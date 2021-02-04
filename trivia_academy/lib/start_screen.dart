@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:trivia_academy/trivia_screen.dart';
 
 class StartScreen extends StatelessWidget {
   @override
@@ -17,7 +18,10 @@ class StartScreen extends StatelessWidget {
           SizedBox(height: 40.0,
           ),
           FlatButton(onPressed: (){
-            print('Começar');
+            Navigator.push(
+              context, 
+            MaterialPageRoute(builder: (context)=> TriviaScreen()),
+            );
           }, child: Text("Começar", style: TextStyle(fontSize: 35,
           fontWeight: FontWeight.w600),
           ),
